@@ -1,6 +1,29 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
+/*COLORS*/
+.main-text-color{
+    color: #2C3E4F ;
+}
+.main-hover-color:hover  {
+    color: #2C3E4F ;
+}
+.main-text-color-link a {
+    color: #2C3E4F !important;
+}
+.second-text-color{
+    color: #E54D42 ;
+}
+.forth-text-color{
+    border-color: #E54D42
+}
+.second-background-color ,.second-before::before , .second-before::after ,.second-hover-background-color:hover ,.second-active.active , .second-dots .owl-dot.active span{
+    background-color: #E54D42 !important;
+    transition: all ease-in-out .3s;
+}
+
+
 .navigation {
     position: absolute;
     left: 0;
@@ -8,15 +31,16 @@ body{
     top: 0;
     width: 100%;
     z-index: 99;
+    transition: all ease-in-out .5s;
 }
-.navigation__container {
+.container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
-.navigation__row {
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -64,4 +88,54 @@ body{
     font-weight: 400;
     transition: all 0.3s ease-in-out;
     padding: 10px 15px !important;
+}
+
+/* HEADER */
+
+.header {
+    background-image: url(../images/vision-img.jpg); 
+    height: 100vh;
+}
+.grassi-after-overlay{
+    position: relative; 
+}
+.grassi-after-overlay::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44,62,79,.8);
+}
+.overlay-lighter:after{
+    background-color: rgba(44,62,79,.7);
+}
+.owl-item img {
+    width: auto;
+    margin-right:  auto;
+    margin-left:  auto;
+    max-width: 100%;
+}
+.index-traingle{
+    position: relative;
+    overflow: hidden;
+}
+.index-traingle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100vh solid rgba(255,255,255,.75);
+    border-right: 98.5vw solid transparent;
+    z-index: 3;
+    bottom: 0;
+}
+.bg-rules {
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
